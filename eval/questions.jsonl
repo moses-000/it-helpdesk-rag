@@ -1,0 +1,49 @@
+{"question": "I forgot my password, how can I change it myself?", "expected_chunk": "password-reset#self-service-password-reset", "must_include": ["passwordreset"]}
+{"question": "How long does my new password need to be?", "expected_chunk": "password-reset#password-rules", "must_include": ["14"]}
+{"question": "How often do I have to change my password?", "expected_chunk": "password-reset#password-rules", "must_include": ["180"]}
+{"question": "The reset website won't verify me, who do I call?", "expected_chunk": "password-reset#if-self-service-does-not-work", "must_include": ["4400"]}
+{"question": "I changed my password but my laptop at home still wants the old one", "expected_chunk": "password-reset#after-resetting", "must_include": ["vpn"]}
+{"question": "I can't log in, it says my account is locked", "expected_chunk": "account-lockout#unlocking-your-account", "must_include": ["30"]}
+{"question": "Why does my account keep getting locked every morning?", "expected_chunk": "account-lockout#repeated-lockouts", "must_include": ["phone"]}
+{"question": "How many wrong attempts before I get locked out?", "expected_chunk": "account-lockout#why-accounts-get-locked", "must_include": ["5|five"]}
+{"question": "How do I set up the authenticator app?", "expected_chunk": "mfa#setting-up-mfa", "must_include": ["mysecurityinfo|security info"]}
+{"question": "I got a new phone, how do I move my sign-in approvals?", "expected_chunk": "mfa#getting-a-new-phone", "must_include": ["security info|mysecurityinfo|old phone"]}
+{"question": "I got an approval notification on my phone but I wasn't logging in", "expected_chunk": "mfa#unexpected-mfa-prompts", "must_include": ["deny"]}
+{"question": "I lost my phone and now can't approve logins", "expected_chunk": "mfa#getting-a-new-phone", "must_include": ["temporary access pass"]}
+{"question": "Do I need to be on the VPN to use Teams from home?", "expected_chunk": "vpn#when-you-need-the-vpn", "must_include": ["without|don't need|do not need|not need|isn't needed|not required"]}
+{"question": "I'm in a hotel and the VPN won't connect", "expected_chunk": "vpn#vpn-will-not-connect", "must_include": ["terms|captive|accept"]}
+{"question": "Opening files on the shared drive from home is really slow", "expected_chunk": "vpn#slow-connection-on-vpn", "must_include": ["onedrive"]}
+{"question": "What's the address I put into GlobalProtect?", "expected_chunk": "vpn#how-to-connect", "must_include": ["vpn.harrowgate.example"]}
+{"question": "Which wifi should my personal phone use in the office?", "expected_chunk": "wifi#personal-phones", "must_include": ["hg-guest"]}
+{"question": "My work laptop won't connect to the office wifi after I was on leave for months", "expected_chunk": "wifi#company-laptop-will-not-join-hg-corporate", "must_include": ["cable"]}
+{"question": "My visitor needs internet access", "expected_chunk": "wifi#networks-available", "must_include": ["reception"]}
+{"question": "How do I pick up my printing from another floor?", "expected_chunk": "printing#secure-print-follow-me-printing", "must_include": ["badge"]}
+{"question": "The printer says badge not recognised", "expected_chunk": "printing#printer-shows-my-job-but-will-not-release-it", "must_include": ["ticket|re-encod|facilities"]}
+{"question": "The printer is running out of ink, who do I tell?", "expected_chunk": "printing#paper-jams-and-toner", "must_include": ["facilities"]}
+{"question": "Teams just shows a white window and won't load", "expected_chunk": "teams#teams-will-not-open-or-shows-a-blank-screen", "must_include": ["cache"]}
+{"question": "People can't hear me on calls", "expected_chunk": "teams#microphone-or-camera-not-working-in-meetings", "must_include": ["settings|devices"]}
+{"question": "How do I get added to my department's team channel?", "expected_chunk": "teams#missing-teams-or-channels", "must_include": ["owner"]}
+{"question": "I accidentally deleted a folder in OneDrive last week, can I get it back?", "expected_chunk": "onedrive#restoring-deleted-files", "must_include": ["recycle bin"]}
+{"question": "OneDrive has a red cross on the icon", "expected_chunk": "onedrive#sync-problems", "must_include": ["name|character"]}
+{"question": "Is it ok to keep my work documents on the desktop?", "expected_chunk": "onedrive#where-to-save-files", "must_include": ["backed up|backup|onedrive"]}
+{"question": "I can't send emails, it says my mailbox is full", "expected_chunk": "outlook#mailbox-full", "must_include": ["archive"]}
+{"question": "Outlook isn't getting any new messages", "expected_chunk": "outlook#outlook-is-not-receiving-new-email", "must_include": ["offline"]}
+{"question": "How do I get access to the accounts shared inbox?", "expected_chunk": "outlook#shared-mailboxes", "must_include": ["owner"]}
+{"question": "I think I received a scam email, what should I do?", "expected_chunk": "phishing#how-to-report", "must_include": ["report"]}
+{"question": "I clicked a link in a dodgy email and typed my password", "expected_chunk": "phishing#if-you-clicked-a-link-or-opened-an-attachment", "must_include": ["4400"]}
+{"question": "A supplier emailed asking us to pay into a new bank account", "expected_chunk": "phishing#payment-and-bank-detail-requests", "must_include": ["phon"]}
+{"question": "My computer is running really slowly", "expected_chunk": "slow-laptop#quick-fixes", "must_include": ["restart"]}
+{"question": "How often do we get new laptops?", "expected_chunk": "slow-laptop#hardware", "must_include": ["4 years|four years"]}
+{"question": "How can I install Zoom without admin rights?", "expected_chunk": "software-request#company-portal", "must_include": ["company portal"]}
+{"question": "I need a program that isn't in the company app store", "expected_chunk": "software-request#software-not-in-company-portal", "must_include": ["5 working days|five working days"]}
+{"question": "My laptop is asking for a 48 digit key on a blue screen", "expected_chunk": "bitlocker#getting-your-recovery-key", "must_include": ["myaccount.microsoft.com"]}
+{"question": "Someone stole my work laptop from my car", "expected_chunk": "lost-device#report-immediately", "must_include": ["4400"]}
+{"question": "What does a new employee need to do on their first day?", "expected_chunk": "new-starter#on-the-first-day", "must_include": ["mfa|multi-factor"]}
+{"question": "How do I request access to the engineering folder?", "expected_chunk": "access-request#how-to-request-access", "must_include": ["access request"]}
+{"question": "How quickly will IT respond if I can't work at all?", "expected_chunk": "service-desk#priorities-and-response-times", "must_include": ["4 working hours"]}
+{"question": "What time does the IT helpdesk close?", "expected_chunk": "service-desk#opening-hours", "must_include": ["18:00|6pm|6 pm|6:00"]}
+{"question": "How do I book annual leave?", "expected_chunk": null, "must_include": []}
+{"question": "What is the company's parental leave policy?", "expected_chunk": null, "must_include": []}
+{"question": "Can you recommend a good restaurant near the office?", "expected_chunk": null, "must_include": []}
+{"question": "How do I claim travel expenses?", "expected_chunk": null, "must_include": []}
+{"question": "What's the Wi-Fi password for my home router?", "expected_chunk": null, "must_include": []}
