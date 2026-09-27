@@ -40,9 +40,9 @@ Run `python -m eval.evaluate` to reproduce.
 
 | Method | Hit@1 | Hit@3 | MRR |
 |---|---|---|---|
-| BM25 (keyword) | 50.0% | 75.0% | 79.5% | 86.4% | 0.620 | 0.1 |
-| Dense (embeddings) | 77.3% | 100.0% | 100.0% | 100.0% | 0.883 | 4.7 |
-| **Hybrid** | 63.6% | 90.9% | 95.5% | 97.7% | 0.767 | 4.6 |
+| BM25 (keyword) | 50.0% | 75.0% | 0.1 |
+| Dense (embeddings) | 77.3% | 100.0% | 4.7 |
+| **Hybrid** | 63.6% | 90.9% | 4.6 |
 
 | Metric | Score |
 |---|---|
