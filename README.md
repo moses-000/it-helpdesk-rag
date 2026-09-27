@@ -57,7 +57,7 @@ Run `python -m eval.evaluate` to reproduce.
 Requires Python 3.10+.
 
 ```bash
-git clone https://github.com/<your-username>/it-helpdesk-rag.git
+git clone https://github.com/moses-000/it-helpdesk-rag
 cd it-helpdesk-rag
 python -m venv .venv
 .venv\Scripts\activate          # Windows   (Mac/Linux: source .venv/bin/activate)
