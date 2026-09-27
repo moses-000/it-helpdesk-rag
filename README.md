@@ -1,10 +1,10 @@
-# 🛠️ IT Helpdesk Assistant: a RAG chatbot
+#  IT Helpdesk Assistant: a RAG chatbot
 
 An AI assistant that answers employee IT support questions ("my account is locked", "VPN won't connect in my hotel") using a company's own help articles, with cited sources. It uses **Retrieval-Augmented Generation (RAG)**: search the knowledge base first, then have an LLM write an answer grounded only in what was found.
 
 Built from my experience as an IT support engineer, where the same questions come in every day and the answers already exist in documentation that nobody reads.
 
-**Live demo:** _[add your Streamlit Cloud link]_
+
 
 ![screenshot](docs/screenshot.png)
 
@@ -36,13 +36,19 @@ flowchart LR
 
 ## Results
 
-Run `python -m eval.evaluate` to reproduce. _(Replace with your own numbers from `eval/results.md`.)_
+Run `python -m eval.evaluate` to reproduce.
 
 | Method | Hit@1 | Hit@3 | MRR |
 |---|---|---|---|
-| BM25 (keyword) | | | |
-| Dense (embeddings) | | | |
-| **Hybrid** | | | |
+| BM25 (keyword) | 50.0% | 75.0% | 79.5% | 86.4% | 0.620 | 0.1 |
+| Dense (embeddings) | 77.3% | 100.0% | 100.0% | 100.0% | 0.883 | 4.7 |
+| **Hybrid** | 63.6% | 90.9% | 95.5% | 97.7% | 0.767 | 4.6 |
+
+| Metric | Score |
+|---|---|
+| Answer accuracy (key facts present) | 84.1% |
+| Answers citing a source | 93.2% |
+| Off-topic questions correctly declined | 100.0% |
 
 **Hit@3** = % of questions where the correct help section was in the top 3 results. **MRR** rewards ranking it first.
 
@@ -105,10 +111,5 @@ python -m eval.evaluate --answers   # also grade LLM answers
    ```
 4. Deploy. The first load builds the index, which takes about a minute.
 
-## Ideas for extending it
-
-- Add a re-ranking step with a cross-encoder model and measure whether Hit@1 improves
-- Let users rate answers 👍/👎 and log questions the bot could not answer, to show which help articles are missing
-- Swap in your own documents, such as real public IT guides from a university
 
 The knowledge base describes a fictional company, Harrowgate Logistics. All names, numbers and URLs are made up.
